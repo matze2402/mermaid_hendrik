@@ -1,0 +1,75 @@
+# This is a basic workflow to help you get started with Actions
+
+name: update-readme
+
+# Controls when the workflow will run
+on:
+  push:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Specify the Python version you need
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have any dependencies
+      - name: Execute gen_DCAT-APsLinkMLviaCSV script
+        run: python scripts/gen_DCAT-APsLinkMLviaCSV.py  # Execute your Python script
+      - name: List directory contents
+        run: ls
+      - name: Commit files
+        run: |
+          git config --local user.name "hendrikborgelt"
+          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git add DCAT_AP_via_CSV.yaml
+          git push
+  job_2: # build Mermaid_Visualization
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Specify the Python version you need
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have any dependencies
+      - name: Execute Mermaid Converter script
+        run: python scripts/Mermaid_Converter.py  # Execute your Python script
+      - name: List directory contents
+        run: ls
+      - name: Commit files
+        run: |
+          git config --local user.name "hendrikborgelt"
+          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git add Mermaid_Diagramm.md
+          git push
+  job_3: # build Mermaid_Visualization
+    needs: job_2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Specify the Python version you need
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have any dependencies
+      - name: Run the update_readme script
+        run: python scripts/update_readme.py
+      - name: List directory contents
+        run: ls
+      - name: Commit files
+        run: |
+          git config --local user.name "hendrikborgelt"
+          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git add README.md
+          git push
+  
+  
+  
