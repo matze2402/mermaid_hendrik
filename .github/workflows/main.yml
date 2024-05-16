@@ -22,8 +22,9 @@ jobs:
         run: pip install -r requirements.txt  # If you have any dependencies
       - name: Execute gen_DCAT-APsLinkMLviaCSV script
         run: python scripts/gen_DCAT-APsLinkMLviaCSV.py  # Execute your Python script
-      #- name: List directory contents
-        #run: ls
+      - name: List all contents in the branch
+        run: |
+          git ls-tree --full-tree -r HEAD
       - name: Commit files
         run: |
           git config --local user.name "matze2402"
@@ -42,8 +43,9 @@ jobs:
         run: pip install -r requirements.txt  # If you have any dependencies
       - name: Execute Mermaid Converter script
         run: python scripts/Mermaid_Converter.py  # Execute your Python script
-      #- name: List directory contents
-        #run: ls
+      - name: List all contents in the branch
+        run: |
+          git ls-tree --full-tree -r HEAD
       - name: Commit files
         run: |
           git config --local user.name "matze2402"
@@ -62,8 +64,9 @@ jobs:
         run: pip install -r requirements.txt  # If you have any dependencies
       - name: Run the update_readme script
         run: python scripts/update_readme.py
-      #- name: List directory contents
-        #run: ls
+      - name: List all contents in the branch
+        run: |
+          git ls-tree --full-tree -r HEAD
       - name: Commit files
         run: |
           git config --local user.name "matze2402"
