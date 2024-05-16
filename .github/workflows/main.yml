@@ -82,8 +82,9 @@ jobs:
         run: |
           git config --local user.name "matze2402"
           git config --local user.email "matthias.gacka@tu-dortmund.de"
-          git add README.md
+          
           git pull origin main --no-edit
+          git add README.md
           git push origin main
   
   
