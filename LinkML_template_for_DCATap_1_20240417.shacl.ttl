@@ -1,0 +1,1296 @@
+@prefix adms: <http://www.w3.org/ns/adms> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lcon: <http://www.w3.org/ns/locn> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl1: <http://www.w3.org/2002/07/owl> .
+@prefix prov1: <http://www.w3.org/ns/prov> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms> .
+@prefix time1: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+xsd:date a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:date .
+
+xsd:dateTime a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:dateTime .
+
+xsd:gYear a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:gYear .
+
+xsd:gYearMonth a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:gYearMonth .
+
+dct:ProvenanceStatement a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:ProvenanceStatement .
+
+spdx:Checksum a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass spdx:Checksum .
+
+xsd:nonNegativeInteger a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:nonNegativeInteger .
+
+dcat:DatasetSeries a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class dct:Location ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path dct:spatial ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 11 ;
+            sh:path dcat:last ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 10 ;
+            sh:path dcat:first ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 7 ;
+            sh:path dct:temporal ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dct:accuralPeriodicity ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 5 ;
+            sh:path dct:modified ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 4 ;
+            sh:path dct:issued ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path dcat:seriesMember ],
+        [ sh:class vcard:Kind ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dcat:contactPoint ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dct:publisher ] ;
+========
+    sh:property [ sh:class vcard:Kind ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dcat:contactPoint ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path dcat:last ],
+        [ sh:class dct:Location ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path dct:spatial ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path dct:accuralPeriodicity ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path dcat:first ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path dct:publisher ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path dct:temporal ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path dcat:seriesMember ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path dct:issued ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path dct:modified ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dcat:DatasetSeries .
+
+dcat:Relationship a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dcat:Relationship .
+
+dcat:Resource a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dcat:Resource .
+
+lcon:Geometry a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass lcon:Geometry .
+
+prov1:Activity a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass prov1:Activity .
+
+prov1:Attribution a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass prov1:Attribution .
+
+dct:MediaTypeOrExtent a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:MediaTypeOrExtent .
+
+xsd:decimal a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:decimal .
+
+xsd:duration a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:duration .
+
+vcard:Kind a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass vcard:Kind .
+
+adms:identifier a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass adms:identifier .
+
+dcat:CatalogRecord a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class dcat:CatalogRecord ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dct:source ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path dct:language ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path dct:title ],
+========
+    sh:property [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path dcat:description ],
+        [ sh:class dcat:CatalogRecord ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path dct:source ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class dcat:Resource ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path foaf:primaryTopic ],
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path adms:status ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 0 ;
+            sh:path dct:modified ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 3 ;
+            sh:path dct:issued ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path dcat:description ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dct:conformsTo ] ;
+========
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path dct:modified ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path dct:title ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path dct:language ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dct:conformsTo ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path adms:status ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path dct:issued ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dcat:CatalogRecord .
+
+dcat:DataService a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class dcat:Dataset ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+            sh:nodeKind sh:BlankNodeOrIRI ;
+========
+            sh:nodeKind sh:BlankNode ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+            sh:order 6 ;
+            sh:path dcat:servesDataset ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:title ],
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+        [ sh:class rdfs:Resource ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:endpointURL ],
+========
+        [ sh:class dct:MediaTypeOrExtent ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path dct:format ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class dct:RightsStatement ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path dct:accessRights ],
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path dcat:description ],
+========
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dcat:endpointDescription ],
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+        [ sh:class dct:MediaTypeOrExtent ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path dct:format ],
+========
+        [ sh:class rdfs:Resource ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:endpointURL ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class dct:LicenseDocument ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path dct:license ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path dcat:description ] ;
+    sh:targetClass dcat:DataService .
+
+dcat:Distribution a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class xsd:nonNegativeInteger ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path dcat:byteSize ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path dcat:packageFormat ],
+========
+    sh:property [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path dcat:downloadURL ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path dcat:packageFormat ],
+        [ sh:class dcat:DataService ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 22 ;
+            sh:path dcat:accessesService ],
+        [ sh:class xsd:nonNegativeInteger ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path dcat:byteSize ],
+        [ sh:class dct:LicenseDocument ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 21 ;
+            sh:path dct:license ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path foaf:page ],
+        [ sh:class xsd:duration ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path dcat:temporalResolution ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path dcat:compressFormat ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dcatap:availability ],
+        [ sh:class dct:MediaTypeOrExtent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path dct:format ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path dct:modified ],
+        [ sh:class dct:RightsStatement ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 16 ;
+            sh:path dct:rights ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path dcat:compressFormat ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dcat:description ],
+        [ sh:class xsd:decimal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path dcat:spatialResolutionInMeters ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path adms:status ],
+        [ sh:class spdx:Checksum ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 20 ;
+            sh:path spdx:checksum ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path dct:issued ],
+        [ sh:class rdfs:Resource ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:accessURL ],
+        [ sh:class odrl:hasPolicy ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 19 ;
+            sh:path odrl:hasPolicy ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path dct:conformsTo ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 14 ;
+            sh:path dct:language ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 17 ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+            sh:path dct:title ],
+        [ sh:class dct:LicenseDocument ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 21 ;
+            sh:path dct:license ],
+        [ sh:class dcat:DataService ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 22 ;
+            sh:path dcat:accessesService ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 18 ;
+            sh:path foaf:page ],
+        [ sh:class spdx:Checksum ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 20 ;
+            sh:path spdx:checksum ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dcat:compressFormat ],
+        [ sh:class xsd:duration ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 11 ;
+            sh:path dcat:temporalResolution ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dcat:description ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dcatap:availability ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path adms:status ],
+        [ sh:class dct:RightsStatement ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 16 ;
+            sh:path dct:rights ],
+        [ sh:class rdfs:Resource ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:accessURL ],
+        [ sh:class odrl:hasPolicy ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 19 ;
+            sh:path odrl:hasPolicy ],
+        [ sh:class xsd:decimal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 10 ;
+            sh:path dcat:spatialResolutionInMeters ],
+        [ sh:class dct:MediaType ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path dcat:compressFormat ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 13 ;
+            sh:path dct:issued ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 15 ;
+            sh:path dct:modified ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 12 ;
+            sh:path dct:conformsTo ],
+        [ sh:class dct:MediaTypeOrExtent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dct:format ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 14 ;
+            sh:path dct:language ],
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 7 ;
+            sh:path dcat:downloadURL ] ;
+========
+            sh:path dct:title ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dcat:Distribution .
+
+odrl:hasPolicy a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass odrl:hasPolicy .
+
+dct:LicenseDocument a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dct:type ] ;
+    sh:targetClass dct:LicenseDocument .
+
+dct:Location a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class rdfs:Literal ;
+            sh:maxCount 1 ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:bbox ],
+        [ sh:class rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dcat:centroid ],
+========
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:bbox ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class lcon:Geometry ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+            sh:path lcon:geometry ] ;
+========
+            sh:path lcon:geometry ],
+        [ sh:class rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dcat:centroid ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dct:Location .
+
+dct:MediaType a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:MediaType .
+
+dct:PeriodOfTime a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 3 ;
+            sh:path time1:hasEnd ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 0 ;
+            sh:path dcat:endDate ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 2 ;
+            sh:path time1:hasBeginning ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 1 ;
+            sh:path dcat:startDate ] ;
+========
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path dcat:startDate ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path dcat:endDate ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path time1:hasBeginning ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path time1:hasEnd ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dct:PeriodOfTime .
+
+dct:RightsStatement a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:RightsStatement .
+
+dct:Standard a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:Standard .
+
+dcat:Catalog a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 18 ;
+            sh:path dct:creator ],
+        [ sh:class foaf:Document ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path foaf:homepage ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class dcat:Catalog ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 15 ;
+            sh:path dct:isPart ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path dct:language ],
+        [ sh:class dcat:Catalog ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 14 ;
+            sh:path dct:hasPart ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 12 ;
+            sh:path dcat:dataset ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dct:publisher ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 3 ;
+            sh:path dct:issued ],
+        [ sh:class dcat:CatalogRecord ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 17 ;
+            sh:path dcat:record ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dct:LicenseDocument ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path dct:license ],
+        [ sh:class dcat:Catalog ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 13 ;
+            sh:path dcat:catalog ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 5 ;
+            sh:path dct:modified ],
+        [ sh:class dcat:DataService ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 10 ;
+            sh:path dcat:service ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dcat:themeTaxonomy ],
+        [ sh:class dct:RightsStatement ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 7 ;
+            sh:path dct:rights ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+========
+    sh:property [ sh:class dct:LicenseDocument ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path dct:license ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path dct:publisher ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dcat:themeTaxonomy ],
+        [ sh:class dcat:Catalog ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path dct:isPart ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path dct:modified ],
+        [ sh:class dct:RightsStatement ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path dct:rights ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path dcat:dataset ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dcat:Catalog ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 13 ;
+            sh:path dcat:catalog ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path dct:issued ],
+        [ sh:class dcat:CatalogRecord ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 17 ;
+            sh:path dcat:record ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path dct:language ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNode ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+            sh:order 16 ;
+            sh:path dct:temporal ],
+        [ sh:class dct:Location ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path dct:spatial ],
+        [ sh:class foaf:Document ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path foaf:homepage ],
+        [ sh:class dcat:Catalog ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 14 ;
+            sh:path dct:hasPart ],
+        [ sh:class dcat:DataService ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path dcat:service ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path dct:creator ] ;
+    sh:targetClass dcat:Catalog .
+
+dct:Frequency a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:Frequency .
+
+dct:LinguisticSystem a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass dct:LinguisticSystem .
+
+foaf:Document a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass foaf:Document .
+
+foaf:agent a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:type ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path foaf:name ] ;
+    sh:targetClass foaf:agent .
+
+dcatap:DatasetinSeries a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class dct:Frequency ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dct:accuralPeriodicity ],
+        [ sh:class dcat:DatasetSeries ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path dcat:inSeries ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+========
+    sh:property [ sh:class dcat:DatasetSeries ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path dcat:inSeries ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path dcat:next ],
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class dcatap:DatasetinSeries ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path dcat:next ],
+        [ sh:class dcatap:DatasetinSeries ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dcat:prev ] ;
+========
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path dcat:prev ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dct:Frequency ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dct:accuralPeriodicity ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dcatap:DatasetinSeries .
+
+dcat:Dataset a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+    sh:property [ sh:class xsd:decimal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path dcat:spatialResolutionInMeters ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 21 ;
+            sh:path dct:relation ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path adms:versionNotes ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 33 ;
+            sh:path dcat:isVersionOf ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 18 ;
+            sh:path dct:language ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 23 ;
+            sh:path foaf:page ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 11 ;
+            sh:path dcat:version ],
+        [ sh:class dcat:Relationship ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dcat:qualifiedRelation ],
+        [ sh:class dct:Location ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 28 ;
+            sh:path dct:spatial ],
+        [ sh:class dct:ProvenanceStatement ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 20 ;
+            sh:path dct:provenance ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 17 ;
+            sh:path dct:issued ],
+        [ sh:class vcard:Kind ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dct:contactPoint ],
+        [ sh:class prov1:Attribution ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 25 ;
+            sh:path prov1:qualifiedAttribution ],
+        [ sh:class adms:identifier ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path adms:identifier ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) ;
+            sh:order 19 ;
+            sh:path dct:modified ],
+        [ sh:class dcat:Distribution ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 31 ;
+            sh:path dcat:distribution ],
+        [ sh:class rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 24 ;
+            sh:path owl1:versionInfo ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 15 ;
+            sh:path dct:identifier ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dct:keyword ],
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 16 ;
+            sh:path dct:isReferencedBy ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 27 ;
+            sh:path dcat:themeTaxonomy ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 22 ;
+            sh:path dct:type ],
+        [ sh:class dcat:Distribution ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 35 ;
+            sh:path adms:sample ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 12 ;
+            sh:path dct:accessRights ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 34 ;
+            sh:path dct:source ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 7 ;
+            sh:path dcat:landingPage ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 14 ;
+            sh:path dct:conformsTo ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 29 ;
+            sh:path dct:temporal ],
+        [ sh:class xsd:duration ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 10 ;
+            sh:path dcat:temporalResolution ],
+        [ sh:class prov1:Activity ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 26 ;
+            sh:path prov1:wasGeneratedBy ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 32 ;
+            sh:path dcat:hasVersion ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 13 ;
+            sh:path dct:accuralPeriodicity ],
+        [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 30 ;
+            sh:path dct:publisher ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path dct:theme ] ;
+========
+    sh:property [ sh:class foaf:agent ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 30 ;
+            sh:path dct:publisher ],
+        [ sh:class rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 24 ;
+            sh:path owl1:versionInfo ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path dcat:description ],
+        [ sh:class dcat:Distribution ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 31 ;
+            sh:path dcat:distribution ],
+        [ sh:class dcat:Distribution ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 35 ;
+            sh:path adms:sample ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path dct:keyword ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path dcat:version ],
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 16 ;
+            sh:path dct:isReferencedBy ],
+        [ sh:class prov1:Attribution ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 25 ;
+            sh:path prov1:qualifiedAttribution ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path dct:theme ],
+        [ sh:class xsd:duration ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path dcat:temporalResolution ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path dcat:landingPage ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path dct:identifier ],
+        [ sh:class xsd:decimal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path dcat:spatialResolutionInMeters ],
+        [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 22 ;
+            sh:path dct:type ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 19 ;
+            sh:path dct:modified ],
+        [ sh:class rdfs:Literal ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path adms:versionNotes ],
+        [ sh:class dct:LinguisticSystem ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path dct:language ],
+        [ sh:class skos:Concept ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 27 ;
+            sh:path dcat:themeTaxonomy ],
+        [ sh:class foaf:Document ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 23 ;
+            sh:path foaf:page ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path dct:accessRights ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 33 ;
+            sh:path dcat:isVersionOf ],
+        [ sh:class dct:Standard ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 14 ;
+            sh:path dct:conformsTo ],
+        [ sh:class dct:Location ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 28 ;
+            sh:path dct:spatial ],
+        [ sh:class rdfs:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 21 ;
+            sh:path dct:relation ],
+        [ sh:class dct:PeriodOfTime ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 29 ;
+            sh:path dct:temporal ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 32 ;
+            sh:path dcat:hasVersion ],
+        [ sh:class adms:identifier ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path adms:identifier ],
+        [ sh:class rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path dct:title ],
+        [ sh:class dct:Frequency ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 13 ;
+            sh:path dct:accuralPeriodicity ],
+        [ sh:class dcat:Relationship ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path dcat:qualifiedRelation ],
+        [ sh:class dct:ProvenanceStatement ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 20 ;
+            sh:path dct:provenance ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 17 ;
+            sh:path dct:issued ],
+        [ sh:class vcard:Kind ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path dct:contactPoint ],
+        [ sh:class prov1:Activity ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 26 ;
+            sh:path prov1:wasGeneratedBy ],
+        [ sh:class dcat:Dataset ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 34 ;
+            sh:path dct:source ] ;
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+    sh:targetClass dcat:Dataset .
+
+rdfs:Resource a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass rdfs:Resource .
+
+skos:Concept a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass skos:Concept .
+
+<<<<<<<< HEAD:LinkML_template_for_DCATap_1_20240417.shacl.ttl
+xsd:date a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:date .
+
+xsd:dateTime a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:dateTime .
+
+xsd:gYear a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:gYear .
+
+xsd:gYearMonth a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass xsd:gYearMonth .
+
+========
+>>>>>>>> test_branch:LinkML_template_for_DCATap_20240417.shacl.ttl
+rdfs:Literal a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass rdfs:Literal .
+

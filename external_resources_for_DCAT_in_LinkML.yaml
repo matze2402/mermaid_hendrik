@@ -1,0 +1,58 @@
+rdfs_Literal:
+    class_uri: rdfs:Literal
+vcard_Kind:
+    class_uri: vcard:Kind
+skos_Concept:
+    class_uri: skos:Concept
+adms_Identifier:
+    class_uri: adms:identifier
+foaf_Document:
+    class_uri: foaf:Document
+dcat_Relationship:
+    class_uri: dcat:Relationship
+xsd_decimal:
+    class_uri: xsd:decimal
+xsd_duration:
+    class_uri: xsd:duration  
+dct_Frequency:
+    class_uri: dct:Frequency
+dct_Standard:
+    class_uri: dct:Standard
+rdfs_Resource:
+    class_uri: rdfs:Resource
+dct_LinguisticSystem:
+    class_uri: dct:LinguisticSystem
+dct_ProvenanceStatement:
+    class_uri: dct:ProvenanceStatement
+prov_Attribution:
+    class_uri: prov:Attribution
+prov_Activity:
+    class_uri: prov:Activity
+dct_MediaTypeOrExtent:
+    class_uri: dct:MediaTypeOrExtent
+xsd_nonNegativInteger:
+    class_uri: xsd:nonNegativeInteger
+dct_MediaType:
+    class_uri: dct:MediaType
+dct_RightsStatement:
+    class_uri: dct:RightsStatement
+odrl_hasPolicy:
+    class_uri: odrl:hasPolicy
+spdx_Checksum:
+    class_uri: spdx:Checksum
+lcon_Geometry:
+    class_uri: lcon:Geometry
+xsd_date:
+    class_uri: xsd:date
+xsd_dateTime:
+    class_uri: xsd:dateTime
+xsd_gYear:
+    class_uri: xsd:gYear
+xsd_gYearMonth:
+    class_uri: xsd:gYearMonth
+# dcatap_DateOrDateTimeDataType:
+    # any_of:
+      # - class_uri: xsd:date
+      # - class_uri: xsd:dateTime
+      # - class_uri: xsd:gYear
+      # - class_uri: xsd:gYearMonth
