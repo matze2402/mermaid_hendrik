@@ -71,13 +71,7 @@ jobs:
           repository: Matze2402/mermaid_hendrik
           event-type: job3  
   
-        run: |
-          git config --local user.name "matze2402"
-          git config --local user.email "matthias.gacka@tu-dortmund.de"
-          git add README.md
-          git pull origin main --no-edit
-          git push origin main
-
+        
 
           
   
