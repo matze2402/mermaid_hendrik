@@ -26,8 +26,8 @@ jobs:
         run: ls
       - name: Commit files
         run: |
-          git config --local user.name "hendrikborgelt"
-          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git config --local user.name "matze2402"
+          git config --local user.email "matthias.gacka@tu-dortmund.de"
           git add DCAT_AP_via_CSV.yaml
           git push
   job_2: # build Mermaid_Visualization
@@ -46,8 +46,8 @@ jobs:
         run: ls
       - name: Commit files
         run: |
-          git config --local user.name "hendrikborgelt"
-          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git config --local user.name "matze2402"
+          git config --local user.email "matthias.gacka@tu-dortmund.de"
           git add Mermaid_Diagramm.md
           git push
   job_3: # build Mermaid_Visualization
@@ -66,8 +66,8 @@ jobs:
         run: ls
       - name: Commit files
         run: |
-          git config --local user.name "hendrikborgelt"
-          git config --local user.email "hendrik.borgelt@tu-dortmund.de"
+          git config --local user.name "matze2402"
+          git config --local user.email "matthias.gacka@tu-dortmund.de"
           git add README.md
           git push
   
