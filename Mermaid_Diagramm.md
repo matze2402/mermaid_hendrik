@@ -16,7 +16,7 @@ class `dcat_DataService` {
   # recommended
   dcat#58;endpointDescription rdfs#58;Resource [0...*] 
   # optional
-
+  dct#58;accessRights dct#58;RightsStatement [1...1] 
   dcat#58;description rdfs#58;Literal [1...*] 
   dct#58;format dct#58;MediaTypeOrExtent [1...*] 
 }
