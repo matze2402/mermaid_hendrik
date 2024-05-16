@@ -4,8 +4,7 @@ classDiagram
 class `dct_Location` {
   # mandatory
   # recommended
-  dcat#58;bbox rdfs#58;Literal [0...1] 
-  dcat#58;centroid rdfs#58;Literal [0...1] 
+  dc
   # optional
   lcon#58;geometry lcon#58;Geometry [1...1] 
 }
