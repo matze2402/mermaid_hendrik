@@ -58,7 +58,7 @@ jobs:
         run: |
           git config --global user.email "matze2402"
           git config --global user.name "matthias.gacka@tu-dortmund.de"
-          git add README.md
+          git add Mermaid_Diagramm.md
           git commit -m "Update combined Mermaid Diagram"
           git push
   job_3: # build Mermaid_Visualization
