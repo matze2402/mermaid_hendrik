@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Path to the directory containing the CSV files (relative to the repository root)
-csv_directory = "./test"
+csv_directory = "./CSV_Files"
 
 # Initialize the dictionary to store CSV file data
 dict_of_csv_files = {}
