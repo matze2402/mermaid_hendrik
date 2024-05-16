@@ -1,6 +1,6 @@
 attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
 description,dcat:description,mandatory,-,Literal,rdfs:Literal,TRUE
-title,dct:title,mandatory,-,Literal,rdfs:Literal,TRUE
+title,dct:titles,mandatory,-,Literal,rdfs:Literal,TRUE
 themeTaxonomy,dcat:themeTaxonomy,recommended,-,Concept,skos:Concept,TRUE
 issued,dct:issued,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
 language,dct:language,recommended,-,LinguisticSystem,dct:LinguisticSystem,TRUE
