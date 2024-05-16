@@ -37,7 +37,7 @@ class `foaf_agent` {
   # mandatory
   foaf#58;name rdfs#58;Literal [1...*] 
   # recommended
-  dct#58;type skos#58;Concept [0... 
+  dct#58;type skos#58;Concept [0...1] 
   # optional
 }
 class `dcat_Dataset` {
