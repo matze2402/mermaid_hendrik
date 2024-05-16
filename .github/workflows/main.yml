@@ -86,21 +86,6 @@ jobs:
           git pull origin main --no-edit
           git push origin main
 
-  job_4: # build Mermaid_Visualization
-    needs: job_3
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-      - name: List all contents in the branch
-        run: |
-          git ls-tree --full-tree -r HEAD
-      - name: Commit files
-        run: |
-          git config --local user.name "matze2402"
-          git config --local user.email "matthias.gacka@tu-dortmund.de"
-          git pull origin main --no-edit
-          git push origin main
 
           
   
