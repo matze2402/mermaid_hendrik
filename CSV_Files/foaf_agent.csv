@@ -1,0 +1,3 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+name,foaf:name,mandatory,-,Literal,rdfs:Literal,TRUE
+type,dct:type,recommended,-,Concept,skos:Concept,FALSE

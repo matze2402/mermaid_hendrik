@@ -1,0 +1,10 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+modified,dct:modified,mandatory,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+status,adms:status,recommended,-,Concept,skos:Concept,FALSE
+conformsTo,dct:conformsTo,recommended,-,Standard,dct:Standard,TRUE
+issued,dct:issued,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+description,dcat:description,optional,-,Literal,rdfs:Literal,TRUE
+language,dct:language,optional,-,LinguisticSystem,dct:LinguisticSystem,TRUE
+title,dct:title,optional,-,Literal,rdfs:Literal,TRUE
+primaryTopic,foaf:primaryTopic,mandatory,Resource,-,dcat:Resource,FALSE
+source,dct:source,optional,CatalogRecord,-,dcat:CatalogRecord,FALSE

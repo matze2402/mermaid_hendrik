@@ -1,0 +1,9 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+endpointURL,dcat:endpointURL,mandatory,-,Resource,rdfs:Resource,TRUE
+title,dct:title,mandatory,-,Literal,rdfs:Literal,TRUE
+endpointDescription,dcat:endpointDescription,recommended,-,Resource,rdfs:Resource,TRUE
+accessRights,dct:accessRights,optional,-,RightsStatement,dct:RightsStatement,FALSE
+description,dcat:description,optional,-,Literal,rdfs:Literal,TRUE
+format,dct:format,optional,-,MediaTypeOrExtent,dct:MediaTypeOrExtent,TRUE
+servesDataset,dcat:servesDataset,recommended,Dataset,-,dcat:Dataset,TRUE
+license,dct:license,optional,LicenseDocument,-,dct:LicenseDocument,FALSE

@@ -1,0 +1,4 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+bbox,dcat:bbox,recommended,-,Literal,rdfs:Literal,FALSE
+centroid,dcat:centroid,recommended,-,Literal,rdfs:Literal,FALSE
+geometry,lcon:geometry,optional,-,lcon:Geometry,lcon:Geometry,FALSE

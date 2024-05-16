@@ -1,0 +1,4 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+description,dcat:description,mandatory,-,Literal,rdfs:Literal,TRUE
+title,dct:title,mandatory,-,Literal,rdfs:Literal,TRUE
+

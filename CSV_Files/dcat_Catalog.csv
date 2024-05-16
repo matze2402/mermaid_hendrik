@@ -1,0 +1,20 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+description,dcat:description,mandatory,-,Literal,rdfs:Literal,TRUE
+title,dct:title,mandatory,-,Literal,rdfs:Literal,TRUE
+themeTaxonomy,dcat:themeTaxonomy,recommended,-,Concept,skos:Concept,TRUE
+issued,dct:issued,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+language,dct:language,recommended,-,LinguisticSystem,dct:LinguisticSystem,TRUE
+modified,dct:modified,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+homepage,foaf:homepage,recommended,-,Document,foaf:Document,FALSE
+rights,dct:rights,optional,-,RightsStatement,dct:RightsStatement,FALSE
+publisher,dct:publisher,mandatory,agent,-,foaf:agent,FALSE
+license,dct:license,recommended,LicenseDocument,-,dct:LicenseDocument,FALSE
+service,dcat:service,recommended,DataService,-,dcat:DataService,FALSE
+spatial,dct:spatial,recommended,Location,-,dct:Location,TRUE
+dataset,dcat:dataset,recommended,Dataset,-,dcat:Dataset,TRUE
+catalog,dcat:catalog,optional,Catalog,-,dcat:Catalog,TRUE
+hasPart,dct:hasPart,optional,Catalog,-,dcat:Catalog,TRUE
+isPart,dct:isPart,optional,Catalog,-,dcat:Catalog,FALSE
+temporal,dct:temporal,optional,PeriodOfTime,-,dct:PeriodOfTime,TRUE
+record,dcat:record,optional,CatalogRecord,-,dcat:CatalogRecord,TRUE
+creator,dct:creator,optional,agent,-,foaf:agent,FALSE

@@ -1,0 +1,13 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+description,dcat:description,mandatory,-,Literal,rdfs:Literal,TRUE
+title,dct:title,recommended,-,Literal,rdfs:Literal,TRUE
+contactPoint,dcat:contactPoint,recommended,-,Kind,vcard:Kind,TRUE
+accuralPeriodicity,dct:accuralPeriodicity,optional,-,Frequency,dct:Frequency,FALSE
+issued,dct:issued,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+modified,dct:modified,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,TRUE
+spatial,dct:spatial,optional,-,Location,dct:Location,TRUE
+temporal,dct:temporal,optional,-,PeriodOfTime,dct:PeriodOfTime,TRUE
+publisher,dct:publisher,recommended,agent,-,foaf:agent,FALSE
+seriesMember,dcat:seriesMember,optional,DatasetinSeries,-,DatasetinSeries,TRUE
+first,dcat:first,optional,DatasetinSeries,-,DatasetinSeries,TRUE
+last,dcat:last,optional,DatasetinSeries,-,DatasetinSeries,TRUE

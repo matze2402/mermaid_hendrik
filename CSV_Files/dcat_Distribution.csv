@@ -1,0 +1,24 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+accessURL,dcat:accessURL,mandatory,-,Resource,rdfs:Resource,TRUE
+availability,dcatap:availability,recommended,-,Concept,skos:Concept,FALSE
+description,dcat:description,recommended,-,Literal,rdfs:Literal,TRUE
+format,dct:format,recommended,-,MediaTypeOrExtent,dct:MediaTypeOrExtent,FALSE
+status,adms:status,optional,-,Concept,skos:Concept,FALSE
+byteSize,dcat:byteSize,optional,-,nonNegativInteger,xsd:nonNegativInteger,FALSE
+compressFormat,dcat:compressFormat,optional,-,MediaType,dct:MediaType,FALSE
+downloadURL,dcat:downloadURL,optional,-,Resource,rdfs:Resource,TRUE
+mediaType,dcat:mediaType,optional,-,MediaType,dct:MediaType,FALSE
+packageFormat,dcat:packageFormat,optional,-,MediaType,dct:MediaType,FALSE
+spatialResolutionInMeters,dcat:spatialResolutionInMeters,optional,-,decimal,xsd:decimal,TRUE
+temporalResolution,dcat:temporalResolution,optional,-,duration,xsd:duration,TRUE
+conformsTo,dct:conformsTo,optional,-,Standard,dct:Standard,TRUE
+issued,dct:issued,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+language,dct:language,optional,-,LinguisticSystem,dct:LinguisticSystem,TRUE
+modified,dct:modified,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+rights,dct:rights,optional,-,RightsStatement,dct:RightsStatement,FALSE
+title,dct:title,optional,-,Literal,rdfs:Literal,TRUE
+page,foaf:page,optional,-,Document,foaf:Document,TRUE
+hasPolicy,odrl:hasPolicy,optional,-,hasPolicy,odrl:hasPolicy,FALSE
+checksum,spdx:checksum,optional,-,Checksum,spdx:Checksum,FALSE
+license,dct:license,recommended,LicenseDocument,-,dct:LicenseDocument,FALSE
+accessesService,dcat:accessesService,optional,DataService,-,dcat:DataService,TRUE

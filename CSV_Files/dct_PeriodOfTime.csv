@@ -1,0 +1,5 @@
+attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
+endDate,dcat:endDate,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+startDate,dcat:startDate,recommended,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
+hasBeginning,time:hasBeginning,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,TRUE
+hasEnd,time:hasEnd,optional,-,temporalLiteral,xsd:date; xsd:dateTime; xsd:gYear; xsd:gYearMonth,FALSE
