@@ -30,7 +30,8 @@ jobs:
           git config --local user.name "matze2402"
           git config --local user.email "matthias.gacka@tu-dortmund.de"
           git add DCAT_AP_via_CSV.yaml
-          git push
+          git pull origin main --no-edit
+          git push origin main
   job_2: # build Mermaid_Visualization
     needs: job_1
     
@@ -60,7 +61,8 @@ jobs:
           git config --global user.name "matthias.gacka@tu-dortmund.de"
           git add Mermaid_Diagramm.md
           git commit -m "Update combined Mermaid Diagram"
-          git push
+          git pull origin main --no-edit
+          git push origin main
   job_3: # build Mermaid_Visualization
     needs: job_2
     runs-on: ubuntu-latest
@@ -81,7 +83,8 @@ jobs:
           git config --local user.name "matze2402"
           git config --local user.email "matthias.gacka@tu-dortmund.de"
           git add README.md
-          git push
+          git pull origin main --no-edit
+          git push origin main
   
   
   
