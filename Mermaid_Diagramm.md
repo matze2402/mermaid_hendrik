@@ -12,8 +12,7 @@ class `dct_Location` {
 class `dcat_DataService` {
   # mandatory
   dcat#58;endpointURL rdfs#58;Resource [1...*] 
-  dct#58;title rdfs#58;Literal [1...*] 
-  # recommended
+
   dcat#58;endpointDescription rdfs#58;Resource [0...*] 
   # optional
   dct#58;accessRights dct#58;RightsStatement [1...1] 
