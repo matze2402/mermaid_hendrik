@@ -33,24 +33,33 @@ jobs:
           git push
   job_2: # build Mermaid_Visualization
     needs: job_1
+    
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Specify the Python version you need
+          python-version: '3.8'  # Specify the Python version you need
+
       - name: Install dependencies
-        run: pip install -r requirements.txt  # If you have any dependencies
-      - name: Execute Mermaid Converter script
-        run: python scripts/Mermaid_Converter.py  # Execute your Python script
-      - name: List all contents in the branch
         run: |
-          git ls-tree --full-tree -r HEAD
-      - name: Commit files
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Run the conversion script
         run: |
-          git config --local user.name "matze2402"
-          git config --local user.email "matthias.gacka@tu-dortmund.de"
-          git add Mermaid_Diagramm.md
+          python scripts/Mermaid_Converter.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "matze2402"
+          git config --global user.name "matthias.gacka@tu-dortmund.de"
+          git add README.md
+          git commit -m "Update combined Mermaid Diagram"
           git push
   job_3: # build Mermaid_Visualization
     needs: job_2
