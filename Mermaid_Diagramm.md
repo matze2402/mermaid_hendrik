@@ -8,7 +8,7 @@ class `dct_Location` {
   dcat#58;centroid rdfs#58;Literal [0...1] 
   # optional
   lcon#58;geometry lcon#58;Geometry [1...1] 
-}
+
 class `dcat_DataService` {
   # mandatory
   dcat#58;endpointURL rdfs#58;Resource [1...*] 
