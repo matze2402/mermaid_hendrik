@@ -1,12 +1,11 @@
-name: Add Header to Markdown Files
+name: update_README.md
 
 on:
-  push:
-    branches:
-      - main
+ repository_dispatch:
+    types: [job3]
 
 jobs:
-  add_header:
+  Update_README:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
