@@ -1,7 +1,7 @@
-attribute,curie,cardinallity,target_main_entity,target_side_entity,target_curie,multivalued
-description,dcat:description,mandatory,-,Literal,rdfs:Literal,TRUE
-title,dct:title,mandatory,-,Literal,rdfs:Literal,TRUE
-accuralPeriodicity,dct:accuralPeriodicity,optional,-,Frequency,dct:Frequency,TRUE
-prev,dcat:prev,optional,DatasetinSeries,-,DatasetinSeries,TRUE
-next,dcat:next,optional,DatasetinSeries,-,DatasetinSeries,TRUE
-inSeries,dcat:inSeries,optional,DatasetSeries,-,dcat:DatasetSeries,TRUE
+from_node,to_node,relation
+dcat:description,mandatory,rdfs:Literal
+dct:title,mandatory,rdfs:Literal
+dct:accuralPeriodicity,dct:Frequency
+dcat:prev,optional,DatasetinSeries
+dcat:next,optional,DatasetinSeries
+dcat:inSeries,optional,dcat:DatasetSeries
